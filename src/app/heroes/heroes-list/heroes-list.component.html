@@ -4,20 +4,20 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md2">Filtrar por:</div>
-        <div class="col-md2">
-          <input type="text" class="form-control" placeholder="Ingrese nombre de heroe" />
+        <div class="col-md4">
+          <input [(ngModel)]="listFilter" type="text" class="form-control" placeholder="Ingrese nombre de heroe" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <h3>Filtro:</h3>
+          <h3>Filtro: {{listFilter}}</h3>
         </div>
       </div>
       <div class="table-responsive">
         <table class="table table-striped" *ngIf="heroes.length>0">
           <thead>
             <tr>
-              <th><button class="btn btn-primary">Imagen</button></th>
+              <th><button (click)="showImage()" class="btn btn-primary">{{muestraImage?'Ocultar ':'Mostrar '}}Imagen</button></th>
               <th>Nombre</th>
               <th>Descripción</th>
               <th>Raza</th>
@@ -25,9 +25,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let hero of heroes">
+            <tr *ngFor="let hero of heroes | heroesFilter:listFilter">
               <td>
-                <img [src]="hero.imagen"
+                <img *ngIf="muestraImage" [src]="hero.imagen"
                 [style.width.px]="imageWidth"
                 [style.margin.px]="imageMargin">
               </td>
