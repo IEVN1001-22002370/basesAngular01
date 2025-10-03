@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.bandas {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.banda h3 {
+  background: #555;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.banda ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.banda li {
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+}
+
+.banda input[type="radio"] {
+  margin-right: 5px;
+}
+
+.color {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: white;
+}
+
+/* Colores */
+.negro { background: black; }
+.cafe { background: #6b3e1e; }
+.rojo { background: red; }
+.naranja { background: orange; color: black; }
+.amarillo { background: yellow; color: black; }
+.verde { background: green; }
+.azul { background: blue; }
+.morado { background: purple; }
+.gris { background: gray; }
+.blanco { background: white; color: black; border: 1px solid #ccc; }
+.dorado { background: goldenrod; color: black; }
+.plata { background: silver; color: black; }
+
+.tolerancia {
+  margin: 15px 0;
+}
+
+.tolerancia label {
+  margin-right: 20px;
+}
+
+.acciones {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  padding: 8px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+

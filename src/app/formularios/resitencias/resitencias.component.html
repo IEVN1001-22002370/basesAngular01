@@ -1,37 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resistencias</title>
+  <title>Calculadora de Resistencias</title>
+  <link rel="stylesheet" href="resitencias.component.css">
 </head>
-
 <body>
-  <div class="container-fluid p-5 bg-primary text-white text-center">
-    <h1>Resistencias</h1>
-    <p>Bienvenido, aqui podras calcular operaciones de resistencias!</p>
-  </div>
+  <div class="container">
+    <h1 class="text-center">Calculadora de Resistencias</h1>
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-sm-4">
+    <div class="bandas">
+      <div class="banda">
         <h3>1ra. Banda</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <ul>
+          <li><input [(ngModel)]="banda1" value="0" type="radio" name="banda1" class="form-check-input"><span class="color negro">0</span></li>
+          <li><input [(ngModel)]="banda1" value="1" type="radio" name="banda1" class="form-check-input"><span class="color cafe">1</span></li>
+          <li><input [(ngModel)]="banda1" value="2" type="radio" name="banda1" class="form-check-input"><span class="color rojo">2</span></li>
+          <li><input [(ngModel)]="banda1" value="3" type="radio" name="banda1" class="form-check-input"><span class="color naranja">3</span></li>
+          <li><input [(ngModel)]="banda1" value="4" type="radio" name="banda1" class="form-check-input"><span class="color amarillo">4</span></li>
+          <li><input [(ngModel)]="banda1" value="5" type="radio" name="banda1" class="form-check-input"><span class="color verde">5</span></li>
+          <li><input [(ngModel)]="banda1" value="6" type="radio" name="banda1" class="form-check-input"><span class="color azul">6</span></li>
+          <li><input [(ngModel)]="banda1" value="7" type="radio" name="banda1" class="form-check-input"><span class="color morado">7</span></li>
+          <li><input [(ngModel)]="banda1" value="8" type="radio" name="banda1" class="form-check-input"><span class="color gris">8</span></li>
+          <li><input [(ngModel)]="banda1" value="9" type="radio" name="banda1" class="form-check-input"><span class="color blanco">9</span></li>
+        </ul>
       </div>
-      <div class="col-sm-4">
+
+      <div class="banda">
         <h3>2da. Banda</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <ul>
+          <li><input [(ngModel)]="banda2" value="0" type="radio" name="banda2" class="form-check-input"><span class="color negro">0</span></li>
+          <li><input [(ngModel)]="banda2" value="1" type="radio" name="banda2" class="form-check-input"><span class="color cafe">1</span></li>
+          <li><input [(ngModel)]="banda2" value="2" type="radio" name="banda2" class="form-check-input"><span class="color rojo">2</span></li>
+          <li><input [(ngModel)]="banda2" value="3" type="radio" name="banda2" class="form-check-input"><span class="color naranja">3</span></li>
+          <li><input [(ngModel)]="banda2" value="4" type="radio" name="banda2" class="form-check-input"><span class="color amarillo">4</span></li>
+          <li><input [(ngModel)]="banda2" value="5" type="radio" name="banda2" class="form-check-input"><span class="color verde">5</span></li>
+          <li><input [(ngModel)]="banda2" value="6" type="radio" name="banda2" class="form-check-input"><span class="color azul">6</span></li>
+          <li><input [(ngModel)]="banda2" value="7" type="radio" name="banda2" class="form-check-input"><span class="color morado">7</span></li>
+          <li><input [(ngModel)]="banda2" value="8" type="radio" name="banda2" class="form-check-input"><span class="color gris">8</span></li>
+          <li><input [(ngModel)]="banda2" value="9" type="radio" name="banda2" class="form-check-input"><span class="color blanco">9</span></li>
+        </ul>
       </div>
-      <div class="col-sm-4">
-        <h3>3ra. Banda</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+
+      <div class="banda">
+        <h3>3ra. Banda<br>Multiplicador</h3>
+        <ul>
+          <li><input [(ngModel)]="banda3" value="1" type="radio" name="banda3" class="form-check-input"><span class="color negro">x1</span></li>
+          <li><input [(ngModel)]="banda3" value="10" type="radio" name="banda3" class="form-check-input"><span class="color cafe">x10</span></li>
+          <li><input [(ngModel)]="banda3" value="100" type="radio" name="banda3" class="form-check-input"><span class="color rojo">x100</span></li>
+          <li><input [(ngModel)]="banda3" value="1000" type="radio" name="banda3" class="form-check-input"><span class="color naranja">x1000</span></li>
+          <li><input [(ngModel)]="banda3" value="10000" type="radio" name="banda3" class="form-check-input"><span class="color amarillo">x10000</span></li>
+          <li><input [(ngModel)]="banda3" value="100000" type="radio" name="banda3" class="form-check-input"><span class="color verde">x100000</span></li>
+          <li><input [(ngModel)]="banda3" value="1000000" type="radio" name="banda3" class="form-check-input"><span class="color azul">x1000000</span></li>
+          <li><input [(ngModel)]="banda3" value="10000000" type="radio" name="banda3" class="form-check-input"><span class="color morado">x10000000</span></li>
+          <li><input [(ngModel)]="banda3" value="100000000" type="radio" name="banda3" class="form-check-input"><span class="color gris">x100000000</span></li>
+          <li><input [(ngModel)]="banda3" value="1000000000" type="radio" name="banda3" class="form-check-input"><span class="color blanco">x1000000000</span></li>
+        </ul>
       </div>
     </div>
+
+    <!-- Tolerancia -->
+    <div class="tolerancia">
+      <label><input [(ngModel)]="tolerancia" value="dorado" type="radio" name="tol" class="form-check-input"> <span class="color dorado">Dorado 5%</span></label>
+      <label><input [(ngModel)]="tolerancia" value="plata" type="radio" name="tol" class="form-check-input"> <span class="color plata">Plata 10%</span></label>
+    </div>
+
+    <!-- Botón -->
+    <div class="acciones">
+      <button (click)="calcular()" >Calcular</button>
+    </div>
+
+    <!-- Resultados -->
+    <table>
+      <tr>
+        <th>Color1</th>
+        <th>Color2</th>
+        <th>Color3</th>
+        <th>Tolerancia</th>
+        <th>Valor</th>
+        <th>Valor máximo</th>
+        <th>Valor mínimo</th>
+      </tr>
+      <tr>
+        <td>{{color1}}</td>
+        <td>{{color2}}</td>
+        <td>{{color3}}</td>
+        <td>{{toleranciaR}}</td>
+        <td>{{resultado}}</td>
+        <td>{{resultadoMax}}</td>
+        <td>{{resultadoMin}}</td>
+      </tr>
+    </table>
   </div>
 </body>
-
 </html>
